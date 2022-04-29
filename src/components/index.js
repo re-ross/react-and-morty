@@ -1,5 +1,3 @@
-import Header from './Header'
-import CharacterCard from './CharacterCard'
 export { Header } from './Header'
 export {CharacterCard} from './CharacterCard'
 export { Navbar } from './Navbar'
