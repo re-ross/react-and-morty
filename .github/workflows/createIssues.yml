@@ -9,7 +9,7 @@ jobs:
       - name: Create first issue
         uses: actions-ecosystem/action-create-issue@v1
         with:
-          github_token: process.env.github_token
+          github_token: ${{ secrets.token }}
           title: 01 Setup project
           body: |
             # Description
