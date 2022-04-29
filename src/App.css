@@ -2,33 +2,3 @@
   margin: 0;
   padding: 0;
 }
-.header {
-  background-color: coral;
-  height: 50px;
-  text-align: center;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  border: 10px;
-  border-color: black;
-}
-
-#circle {
-    background: lightblue;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-}
