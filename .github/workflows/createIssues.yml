@@ -9,7 +9,7 @@ jobs:
       - name: Create first issue
         uses: actions-ecosystem/action-create-issue@v1
         with:
-          github_token: ${{ secrets.github_token }}
+          # github_token: ${{ secrets.github_token }}
           title: 01 Setup project
           body: |
             # Description
@@ -17,8 +17,8 @@ jobs:
             The repo is empty. (Except the readme ;-) ). We need to create a React app in it and some other stuff.
 
             ## ToDos
-            - [ ] move this issue in the board from `ToDo` tab into `In Progress` tab 
-            - [ ] install React  
+            - [ ] move this issue in the board from `ToDo` tab into `In Progress` tab
+            - [ ] install React
 
             inside the repo use
             ```shell
