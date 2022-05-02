@@ -7,16 +7,17 @@ const Wrapper = styled.div`
   justify-content: center;
   margin-top: 10px;
 `
-
-const Image = styled.div`
-content:url(https://rickandmortyapi.com/api/character/avatar/2.jpeg)
+const Name = styled.h2`
+  font-weight: bold;
+  font-size: large;
 `
 
-export const CharacterCard = () => {
+export const CharacterCard = ({char}) => {
   return (
-      <Wrapper>
-          <Image />
-          <p>Morty Smith</p>
-    </Wrapper>
+<Wrapper char={char}>
+  <img src={char.image} alt={char.name} />
+      <Name>{char.name }</Name>
+</Wrapper>
+
   )
 }
