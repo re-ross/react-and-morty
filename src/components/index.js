@@ -1,4 +1,3 @@
-import CharacterPage from './CharacterPage'
 export { Header } from './Header'
 export { CharacterCard } from './CharacterCard'
 export { CharacterPage } from './CharacterPage'

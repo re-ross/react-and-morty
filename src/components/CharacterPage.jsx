@@ -16,8 +16,13 @@ const Name = styled.h2`
 `
 
 export const CharacterPage = () => {
-    const { id } = useParams();
-    const [character, setCharacter] = useState({});
+  const { id } = useParams();
+  const [character, setCharacter] = useState({});
+  const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+      setIsOpen(!isOpen)
+  }
 
     useEffect(() => {
         axios.get(`https://rickandmortyapi.com/api/character/${id}`).then((res) => setCharacter(res.data)).catch((err) => console.log(err))
@@ -25,7 +30,15 @@ export const CharacterPage = () => {
     return (
         <Wrapper>
             <img src={character.image} alt={character.name} />
-            <Name>{character.name}</Name>
+        <Name>{character.name}</Name>
+        <button onClick={toggle}>show more</button>
+        {isOpen ? (
+          <ul>
+            <li>Species: {character.species}</li>
+            <li>Gender: {character.gender}</li>
+            <li>Status: {character.status}</li>
+          </ul>
+        ) : null }
        </Wrapper>
   )
 }

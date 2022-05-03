@@ -13,13 +13,13 @@ const Name = styled.h2`
   font-size: large;
 `
 
-export const CharacterCard = ({char}) => {
+export const CharacterCard = ({character}) => {
   return (
 <Wrapper>
-  <img src={char.image} alt={char.name} />
-      <Name>{char.name}</Name>
-      <Link to={`/char/${char.id}`} >
-        <button>show more</button>
+  <img src={character.image} alt={character.name} />
+      <Name>{character.name}</Name>
+      <Link to={`/char/${character.id}`} >
+        <button>show me what you got</button>
       </Link>
 </Wrapper>
 
