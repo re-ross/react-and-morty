@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
-const Wrapper = styled.div`
+const Wrapper = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,9 +15,12 @@ const Name = styled.h2`
 
 export const CharacterCard = ({char}) => {
   return (
-<Wrapper char={char}>
+<Wrapper>
   <img src={char.image} alt={char.name} />
-      <Name>{char.name }</Name>
+      <Name>{char.name}</Name>
+      <Link to={`/char/${char.id}`} >
+        <button>show more</button>
+      </Link>
 </Wrapper>
 
   )
