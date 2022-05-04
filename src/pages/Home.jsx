@@ -1,21 +1,26 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { CharacterCard } from "../components";
+import axios from "axios";
+import styled from 'styled-components'
 
-const Home = () => {
-    const [characters, setCharacters] = useState([])
+export const Home = () => {
+  const [characters, setCharacters] = useState([])
   useEffect(() => {
     axios.get('https://rickandmortyapi.com/api/character')
       .then((res) => setCharacters(res.data.results))
       .catch((err) => console.error(err))
   }, [])
   return (
-   <ul>
+   <List>
  {characters.map((character) => (
           <CharacterCard character={character} key={character.id}/>
         ))}
-          </ul>
+          </List>
   )
 }
 
-export default Home
+
+const List = styled.ul`
+  list-style: none;
+  padding: 1em;
+`
