@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Header, Navbar } from './components'
-import { Home, CharacterDetail, Favorites} from './pages';
+import { Home, CharacterDetail, Favorites, RandomCharacter} from './pages';
 import styled from 'styled-components'
 import "./App.css";
 
@@ -28,7 +28,8 @@ import "./App.css";
         <Routes>
           <Route path='/' element={<Home />} />
             <Route path='/char/:id' element={<CharacterDetail favoriteIds={ favoriteIds } toggleFav={ toggleFav } />} />
-            <Route path='favorites' element={<Favorites favoriteIds={ favoriteIds }toggleFav={ toggleFav } />} />
+            <Route path='/favorites' element={<Favorites favoriteIds={favoriteIds} toggleFav={toggleFav} />} />
+            <Route path='/random' element={<RandomCharacter />} />
           </Routes>
           </Main>
         <Navbar />
