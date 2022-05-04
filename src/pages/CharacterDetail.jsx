@@ -14,13 +14,13 @@ export const CharacterDetail = ({ favoriteIds, toggleFav }) => {
 
     useEffect(() => {
         axios.get(`https://rickandmortyapi.com/api/character/${id}`).then((res) => setCharacter(res.data)).catch((err) => console.log(err))
-    },[])
+    },[id])
     return (
       <Wrapper>
     <FavoriteBtn onClick={() => toggleFav(id)} isFavorite={favoriteIds.includes(id)}>Favorite</FavoriteBtn>
         <img src={character.image} alt={character.name} />
         <Name>{character.name}</Name>
-        <button onClick={toggle}>show more</button>
+        <DetailsBtn onClick={toggle}>show more</DetailsBtn>
         {isOpen ? (
           <ul>
             <li>Species: {character.species}</li>
@@ -45,8 +45,12 @@ const Name = styled.h2`
   font-size: large;
 `
 
+const DetailsBtn = styled.button`
+  background-color: #00A6ED;
+`
+
 const FavoriteBtn = styled.button`
   position: absolute;
   right: 0;
-  background-color: ${(props) => props.isFavorite ? 'lightgreen' : ''};
+  background-color: ${(props) => props.isFavorite ? '#7FB800' : ''};
 `

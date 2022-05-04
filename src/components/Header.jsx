@@ -10,7 +10,7 @@ export const Header = () => {
 
 const Wrapper = styled.header`
   background-color: #F6511D;
-  height: 60px;
+  height: 80px;
   text-align: center;
   display: flex;
   align-items: center;
