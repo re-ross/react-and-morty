@@ -5,7 +5,7 @@ import { Home, CharacterDetail, Favorites, RandomCharacter} from './pages';
 import styled from 'styled-components'
 import "./App.css";
 
- export  const App = () => {
+ const App = () => {
   const [favoriteIds, setFavoriteIds] = useState(() => JSON.parse(localStorage.getItem('favoriteIds')) || [])
 
   const toggleFav = (id) => {

@@ -15,7 +15,7 @@ export const Home = () => {
  {characters.map((character) => (
           <CharacterCard character={character} key={character.id}/>
         ))}
-          </List>
+    </List>
   )
 }
 

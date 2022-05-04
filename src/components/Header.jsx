@@ -2,13 +2,13 @@ import styled from 'styled-components'
 
 export const Header = () => {
     return (
-        <Wrapper>
+        <HeaderWrapper>
             <Title>React and Morty</Title>
-      </Wrapper>
+      </HeaderWrapper>
   )
 }
 
-const Wrapper = styled.header`
+const HeaderWrapper = styled.header`
   background-color: #F6511D;
   height: 80px;
   text-align: center;

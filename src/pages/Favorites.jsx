@@ -1,6 +1,6 @@
-import axios from 'axios';
 import { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import { Wrapper, DetailsButton, CharacterName, FavoriteButton } from '../components'
+import axios from 'axios';
 
 export const Favorites = ({favoriteIds, toggleFav}) => {
   const [characters, setCharacters] = useState([])
@@ -24,10 +24,10 @@ export const Favorites = ({favoriteIds, toggleFav}) => {
      <div>
           {characters?.map((character) => (
      <Wrapper>
-        <FavoriteBtn onClick={() => toggleFav(character.id.toString())} isFavorite={true}>Remove from Favorites</FavoriteBtn>
+        <FavoriteButton onClick={() => toggleFav(character.id.toString())} isFavorite={true}>Remove</FavoriteButton>
         <img src={character.image} alt={character.name} />
-        <Name>{character.name}</Name>
-       <DetailsBtn onClick={toggle}>show more</DetailsBtn>
+        <CharacterName>{character.name}</CharacterName>
+       <DetailsButton onClick={toggle}>show more</DetailsButton>
         {isOpen ? (
           <ul>
             <li>Species: {character.species}</li>
@@ -40,24 +40,3 @@ export const Favorites = ({favoriteIds, toggleFav}) => {
    </div>
   )
  }
-
- const Wrapper = styled.li`
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-`
-const Name = styled.h2`
-  font-weight: bold;
-  font-size: large;
-`
-const FavoriteBtn = styled.button`
-  position: absolute;
-  right: 0;
-  background-color: ${(props) => props.isFavorite ? '#7FB800' : ''};
-`
-
-const DetailsBtn = styled.button`
-  background-color: #00A6ED;
-`

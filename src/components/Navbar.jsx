@@ -28,15 +28,15 @@ const Footer = styled.footer`
   bottom: 0;
   right: 0;
   left: 0;
-  & nav > ul {
+`
+
+const Nav = styled.nav`
+  height: 100%;
+  background-color: #00A6ED;
+  ul {
     display: flex;
     justify-content: space-between;
     height: 100%;
     align-items: center;
   }
-`
-
-const Nav = styled.nav`
-  height: 100%;
-  background-color: white;
 `
