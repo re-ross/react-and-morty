@@ -1,17 +1,6 @@
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
-const Wrapper = styled.li`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-`
-const Name = styled.h2`
-  font-weight: bold;
-  font-size: large;
-`
 
 export const CharacterCard = ({character}) => {
   return (
@@ -25,3 +14,15 @@ export const CharacterCard = ({character}) => {
 
   )
 }
+
+
+const Wrapper = styled.div`
+margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  `
+const Name = styled.h2`
+    font-weight: bold;
+    font-size: large;
+  `

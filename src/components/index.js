@@ -1,4 +1,4 @@
 export { Header } from './Header'
 export { CharacterCard } from './CharacterCard'
-export { CharacterPage } from './CharacterPage'
+export { CharacterDetail } from './CharacterDetail'
 export { Navbar } from './Navbar'
