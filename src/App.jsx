@@ -1,7 +1,7 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import {Header, Navbar, CharacterDetail} from './components'
-import { Home } from './pages';
+import { Header, Navbar } from './components'
+import { Home, CharacterDetail, Favorites} from './pages';
 import styled from 'styled-components'
 import "./App.css";
 
@@ -27,7 +27,8 @@ import "./App.css";
         <Main>
         <Routes>
           <Route path='/' element={<Home />} />
-            <Route path='/char/:id' element={<CharacterDetail favoriteIds={favoriteIds} toggleFav={toggleFav}/>}/>
+            <Route path='/char/:id' element={<CharacterDetail favoriteIds={ favoriteIds } toggleFav={ toggleFav } />} />
+            <Route path='favorites' element={<Favorites favoriteIds={ favoriteIds }toggleFav={ toggleFav } />} />
           </Routes>
           </Main>
         <Navbar />
